@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinkelServiceLibrary2", "WinkelServiceLibrary2\WinkelServiceLibrary2.csproj", "{647FD0A1-4DF3-4C85-85CD-180C9715F672}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinkelHost", "WinkelHost\WinkelHost.csproj", "{03FBB915-E391-4118-A940-CB1833DFFE96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinkelClient", "WinkelClient\WinkelClient.csproj", "{99D32590-7617-4C31-82A9-7897E5A657E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{647FD0A1-4DF3-4C85-85CD-180C9715F672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647FD0A1-4DF3-4C85-85CD-180C9715F672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647FD0A1-4DF3-4C85-85CD-180C9715F672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647FD0A1-4DF3-4C85-85CD-180C9715F672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03FBB915-E391-4118-A940-CB1833DFFE96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03FBB915-E391-4118-A940-CB1833DFFE96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03FBB915-E391-4118-A940-CB1833DFFE96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03FBB915-E391-4118-A940-CB1833DFFE96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99D32590-7617-4C31-82A9-7897E5A657E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D32590-7617-4C31-82A9-7897E5A657E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D32590-7617-4C31-82A9-7897E5A657E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D32590-7617-4C31-82A9-7897E5A657E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

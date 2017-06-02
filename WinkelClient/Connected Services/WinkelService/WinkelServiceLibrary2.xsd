@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WinkelServiceLibrary2" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WinkelServiceLibrary2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfProductEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductEntity" nillable="true" type="tns:ProductEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductEntity" nillable="true" type="tns:ArrayOfProductEntity" />
+  <xs:complexType name="ProductEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="ProductInventoryEntity" nillable="true" type="tns:ArrayOfProductInventoryEntity" />
+      <xs:element minOccurs="0" name="Stock" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductEntity" nillable="true" type="tns:ProductEntity" />
+  <xs:complexType name="ArrayOfProductInventoryEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductInventoryEntity" nillable="true" type="tns:ProductInventoryEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductInventoryEntity" nillable="true" type="tns:ArrayOfProductInventoryEntity" />
+  <xs:complexType name="ProductInventoryEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="InventoryEntity" nillable="true" type="tns:InventoryEntity" />
+      <xs:element minOccurs="0" name="InventoryEntityId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductEntity" nillable="true" type="tns:ProductEntity" />
+      <xs:element minOccurs="0" name="ProductEntityId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductInventoryEntity" nillable="true" type="tns:ProductInventoryEntity" />
+  <xs:complexType name="InventoryEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerEntity" nillable="true" type="tns:ArrayOfCustomerEntity" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductInventoryEntity" nillable="true" type="tns:ArrayOfProductInventoryEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InventoryEntity" nillable="true" type="tns:InventoryEntity" />
+  <xs:complexType name="ArrayOfCustomerEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerEntity" nillable="true" type="tns:CustomerEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerEntity" nillable="true" type="tns:ArrayOfCustomerEntity" />
+  <xs:complexType name="CustomerEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="InventoryEntity" nillable="true" type="tns:InventoryEntity" />
+      <xs:element minOccurs="0" name="InventoryEntityId" type="xs:int" />
+      <xs:element minOccurs="0" name="Money" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerEntity" nillable="true" type="tns:CustomerEntity" />
+</xs:schema>

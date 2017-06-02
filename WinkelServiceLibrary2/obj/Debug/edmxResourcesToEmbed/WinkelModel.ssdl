@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WinkelModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="WinkelModelStoreContainer">
+    <EntitySet Name="CustomerEntitySet" EntityType="WinkelModel.Store.CustomerEntitySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductEntitySet" EntityType="WinkelModel.Store.ProductEntitySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InventoryEntitySet" EntityType="WinkelModel.Store.InventoryEntitySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductInventoryEntitySet" EntityType="WinkelModel.Store.ProductInventoryEntitySet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CustomerEntityInventoryEntity" Association="WinkelModel.Store.CustomerEntityInventoryEntity">
+      <End Role="CustomerEntity" EntitySet="CustomerEntitySet" />
+      <End Role="InventoryEntity" EntitySet="InventoryEntitySet" />
+    </AssociationSet>
+    <AssociationSet Name="ProductInventoryEntityInventoryEntity" Association="WinkelModel.Store.ProductInventoryEntityInventoryEntity">
+      <End Role="ProductInventoryEntity" EntitySet="ProductInventoryEntitySet" />
+      <End Role="InventoryEntity" EntitySet="InventoryEntitySet" />
+    </AssociationSet>
+    <AssociationSet Name="ProductEntityProductInventoryEntity" Association="WinkelModel.Store.ProductEntityProductInventoryEntity">
+      <End Role="ProductEntity" EntitySet="ProductEntitySet" />
+      <End Role="ProductInventoryEntity" EntitySet="ProductInventoryEntitySet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CustomerEntitySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Money" Type="float" Nullable="false" />
+    <Property Name="InventoryEntityId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductEntitySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="Stock" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InventoryEntitySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductInventoryEntitySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InventoryEntityId" Type="int" Nullable="false" />
+    <Property Name="ProductEntityId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="CustomerEntityInventoryEntity">
+    <End Role="CustomerEntity" Type="WinkelModel.Store.CustomerEntitySet" Multiplicity="*" />
+    <End Role="InventoryEntity" Type="WinkelModel.Store.InventoryEntitySet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerEntity">
+        <PropertyRef Name="InventoryEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductInventoryEntityInventoryEntity">
+    <End Role="ProductInventoryEntity" Type="WinkelModel.Store.ProductInventoryEntitySet" Multiplicity="*" />
+    <End Role="InventoryEntity" Type="WinkelModel.Store.InventoryEntitySet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductInventoryEntity">
+        <PropertyRef Name="InventoryEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductEntityProductInventoryEntity">
+    <End Role="ProductEntity" Type="WinkelModel.Store.ProductEntitySet" Multiplicity="1" />
+    <End Role="ProductInventoryEntity" Type="WinkelModel.Store.ProductInventoryEntitySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductInventoryEntity">
+        <PropertyRef Name="ProductEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

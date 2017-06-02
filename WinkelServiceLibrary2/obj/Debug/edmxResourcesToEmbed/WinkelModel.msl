@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WinkelModelStoreContainer" CdmEntityContainer="WinkelModelContainer">
+    <EntitySetMapping Name="CustomerEntitySet">
+      <EntityTypeMapping TypeName="IsTypeOf(WinkelModel.CustomerEntity)">
+        <MappingFragment StoreEntitySet="CustomerEntitySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="InventoryEntityId" ColumnName="InventoryEntityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductEntitySet">
+      <EntityTypeMapping TypeName="IsTypeOf(WinkelModel.ProductEntity)">
+        <MappingFragment StoreEntitySet="ProductEntitySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryEntitySet">
+      <EntityTypeMapping TypeName="IsTypeOf(WinkelModel.InventoryEntity)">
+        <MappingFragment StoreEntitySet="InventoryEntitySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductInventoryEntitySet">
+      <EntityTypeMapping TypeName="IsTypeOf(WinkelModel.ProductInventoryEntity)">
+        <MappingFragment StoreEntitySet="ProductInventoryEntitySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InventoryEntityId" ColumnName="InventoryEntityId" />
+          <ScalarProperty Name="ProductEntityId" ColumnName="ProductEntityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

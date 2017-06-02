@@ -1,0 +1,13 @@
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\bin\Debug\WinkelHost.exe.config
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\bin\Debug\WinkelHost.exe
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\bin\Debug\WinkelHost.pdb
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\bin\Debug\WinkelServiceLibrary2.dll
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\bin\Debug\EntityFramework.dll
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\bin\Debug\WinkelServiceLibrary2.pdb
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\bin\Debug\WinkelServiceLibrary2.dll.config
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\bin\Debug\EntityFramework.xml
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\obj\Debug\WinkelHost.csprojResolveAssemblyReference.cache
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\obj\Debug\WinkelHost.exe
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\obj\Debug\WinkelHost.pdb
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelHost\bin\Debug\EntityFramework.SqlServer.xml

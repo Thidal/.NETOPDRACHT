@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      
+    <Schema Namespace="WinkelModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="WinkelModelStoreContainer">
+    <EntitySet Name="CustomerEntitySet" EntityType="WinkelModel.Store.CustomerEntitySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductEntitySet" EntityType="WinkelModel.Store.ProductEntitySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InventoryEntitySet" EntityType="WinkelModel.Store.InventoryEntitySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductInventoryEntitySet" EntityType="WinkelModel.Store.ProductInventoryEntitySet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CustomerEntityInventoryEntity" Association="WinkelModel.Store.CustomerEntityInventoryEntity">
+      <End Role="CustomerEntity" EntitySet="CustomerEntitySet" />
+      <End Role="InventoryEntity" EntitySet="InventoryEntitySet" />
+    </AssociationSet>
+    <AssociationSet Name="ProductInventoryEntityInventoryEntity" Association="WinkelModel.Store.ProductInventoryEntityInventoryEntity">
+      <End Role="ProductInventoryEntity" EntitySet="ProductInventoryEntitySet" />
+      <End Role="InventoryEntity" EntitySet="InventoryEntitySet" />
+    </AssociationSet>
+    <AssociationSet Name="ProductEntityProductInventoryEntity" Association="WinkelModel.Store.ProductEntityProductInventoryEntity">
+      <End Role="ProductEntity" EntitySet="ProductEntitySet" />
+      <End Role="ProductInventoryEntity" EntitySet="ProductInventoryEntitySet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CustomerEntitySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Money" Type="float" Nullable="false" />
+    <Property Name="InventoryEntityId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductEntitySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="Stock" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InventoryEntitySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductInventoryEntitySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InventoryEntityId" Type="int" Nullable="false" />
+    <Property Name="ProductEntityId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="CustomerEntityInventoryEntity">
+    <End Role="CustomerEntity" Type="WinkelModel.Store.CustomerEntitySet" Multiplicity="*" />
+    <End Role="InventoryEntity" Type="WinkelModel.Store.InventoryEntitySet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CustomerEntity">
+        <PropertyRef Name="InventoryEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductInventoryEntityInventoryEntity">
+    <End Role="ProductInventoryEntity" Type="WinkelModel.Store.ProductInventoryEntitySet" Multiplicity="*" />
+    <End Role="InventoryEntity" Type="WinkelModel.Store.InventoryEntitySet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductInventoryEntity">
+        <PropertyRef Name="InventoryEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductEntityProductInventoryEntity">
+    <End Role="ProductEntity" Type="WinkelModel.Store.ProductEntitySet" Multiplicity="1" />
+    <End Role="ProductInventoryEntity" Type="WinkelModel.Store.ProductInventoryEntitySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductInventoryEntity">
+        <PropertyRef Name="ProductEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WinkelModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="WinkelModelContainer" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="CustomerEntitySet" EntityType="WinkelModel.CustomerEntity" />
+          <EntitySet Name="ProductEntitySet" EntityType="WinkelModel.ProductEntity" />
+          <EntitySet Name="InventoryEntitySet" EntityType="WinkelModel.InventoryEntity" />
+          <EntitySet Name="ProductInventoryEntitySet" EntityType="WinkelModel.ProductInventoryEntity" />
+          <AssociationSet Name="CustomerEntityInventoryEntity" Association="WinkelModel.CustomerEntityInventoryEntity">
+            <End Role="CustomerEntity" EntitySet="CustomerEntitySet" />
+            <End Role="InventoryEntity" EntitySet="InventoryEntitySet" />
+          </AssociationSet>
+          <AssociationSet Name="ProductInventoryEntityInventoryEntity" Association="WinkelModel.ProductInventoryEntityInventoryEntity">
+            <End Role="ProductInventoryEntity" EntitySet="ProductInventoryEntitySet" />
+            <End Role="InventoryEntity" EntitySet="InventoryEntitySet" />
+          </AssociationSet>
+          <AssociationSet Name="ProductEntityProductInventoryEntity" Association="WinkelModel.ProductEntityProductInventoryEntity">
+            <End Role="ProductEntity" EntitySet="ProductEntitySet" />
+            <End Role="ProductInventoryEntity" EntitySet="ProductInventoryEntitySet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CustomerEntity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" />
+          <Property Name="Money" Type="Double" Nullable="false" />
+          <NavigationProperty Name="InventoryEntity" Relationship="WinkelModel.CustomerEntityInventoryEntity" FromRole="CustomerEntity" ToRole="InventoryEntity" />
+          <Property Name="InventoryEntityId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductEntity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="Stock" Type="String" Nullable="false" />
+          <NavigationProperty Name="ProductInventoryEntity" Relationship="WinkelModel.ProductEntityProductInventoryEntity" FromRole="ProductEntity" ToRole="ProductInventoryEntity" />
+        </EntityType>
+        <EntityType Name="InventoryEntity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <NavigationProperty Name="CustomerEntity" Relationship="WinkelModel.CustomerEntityInventoryEntity" FromRole="InventoryEntity" ToRole="CustomerEntity" />
+          <NavigationProperty Name="ProductInventoryEntity" Relationship="WinkelModel.ProductInventoryEntityInventoryEntity" FromRole="InventoryEntity" ToRole="ProductInventoryEntity" />
+        </EntityType>
+        <EntityType Name="ProductInventoryEntity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="InventoryEntity" Relationship="WinkelModel.ProductInventoryEntityInventoryEntity" FromRole="ProductInventoryEntity" ToRole="InventoryEntity" />
+          <Property Name="InventoryEntityId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ProductEntity" Relationship="WinkelModel.ProductEntityProductInventoryEntity" FromRole="ProductInventoryEntity" ToRole="ProductEntity" />
+          <Property Name="ProductEntityId" Type="Int32" Nullable="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <Association Name="CustomerEntityInventoryEntity">
+          <End Type="WinkelModel.CustomerEntity" Role="CustomerEntity" Multiplicity="*" />
+          <End Type="WinkelModel.InventoryEntity" Role="InventoryEntity" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="InventoryEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CustomerEntity">
+              <PropertyRef Name="InventoryEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProductInventoryEntityInventoryEntity">
+          <End Type="WinkelModel.ProductInventoryEntity" Role="ProductInventoryEntity" Multiplicity="*" />
+          <End Type="WinkelModel.InventoryEntity" Role="InventoryEntity" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="InventoryEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductInventoryEntity">
+              <PropertyRef Name="InventoryEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProductEntityProductInventoryEntity">
+          <End Type="WinkelModel.ProductEntity" Role="ProductEntity" Multiplicity="1" />
+          <End Type="WinkelModel.ProductInventoryEntity" Role="ProductInventoryEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductEntity">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductInventoryEntity">
+              <PropertyRef Name="ProductEntityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WinkelModelStoreContainer" CdmEntityContainer="WinkelModelContainer">
+    <EntitySetMapping Name="CustomerEntitySet">
+      <EntityTypeMapping TypeName="IsTypeOf(WinkelModel.CustomerEntity)">
+        <MappingFragment StoreEntitySet="CustomerEntitySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="InventoryEntityId" ColumnName="InventoryEntityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductEntitySet">
+      <EntityTypeMapping TypeName="IsTypeOf(WinkelModel.ProductEntity)">
+        <MappingFragment StoreEntitySet="ProductEntitySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryEntitySet">
+      <EntityTypeMapping TypeName="IsTypeOf(WinkelModel.InventoryEntity)">
+        <MappingFragment StoreEntitySet="InventoryEntitySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductInventoryEntitySet">
+      <EntityTypeMapping TypeName="IsTypeOf(WinkelModel.ProductInventoryEntity)">
+        <MappingFragment StoreEntitySet="ProductInventoryEntitySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InventoryEntityId" ColumnName="InventoryEntityId" />
+          <ScalarProperty Name="ProductEntityId" ColumnName="ProductEntityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="False" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
