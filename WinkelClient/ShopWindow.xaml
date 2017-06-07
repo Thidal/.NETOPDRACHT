@@ -1,23 +1,37 @@
-﻿<Window x:Class="WinkelClient.ShopWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WinkelClient"
+        xmlns:WinkelService="clr-namespace:WinkelClient.WinkelService" x:Class="WinkelClient.ShopWindow"
         mc:Ignorable="d"
-        Title="ShopWindow" Height="300" Width="300">
+        Title="ShopWindow" Height="321.203" Width="493.985">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="37*"/>
             <RowDefinition Height="233*"/>
         </Grid.RowDefinitions>
-        <ListBox HorizontalAlignment="Left" Height="133" Margin="26,0.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
-        <ListBox x:Name="ProductList" HorizontalAlignment="Left" Height="133" VerticalAlignment="Top" Width="100" Margin="165,0.2,0,0" Grid.Row="1"/>
-        <Label Content="Placeholder saldo" HorizontalAlignment="Left" Margin="26,138.2,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Buy" HorizontalAlignment="Left" Margin="247,191.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="37" Height="32"/>
-        <Label Content="Inventory" HorizontalAlignment="Left" Margin="26,11,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
-        <Label Content="Products" HorizontalAlignment="Left" Margin="165,11,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <Button Content="Refresh" HorizontalAlignment="Left" Margin="184,191.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Height="32"/>
+        <Label x:Name="SaldoLabel" Content="Placeholder saldo" HorizontalAlignment="Left" Margin="30,173.5,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button Content="Buy" HorizontalAlignment="Left" Margin="400,191,0,0" Grid.Row="1" VerticalAlignment="Top" Width="66" Height="32" Click="Buy_Button"/>
+        <Label Content="Inventory" HorizontalAlignment="Left" Margin="30,19,0,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
+        <Label Content="Products" HorizontalAlignment="Left" Margin="247,19,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <Button Content="Refresh" HorizontalAlignment="Left" Margin="310,191,0,0" Grid.Row="1" VerticalAlignment="Top" Width="71" Height="32" Click="refresh_Click"/>
+        <ListView x:Name="InventoryList" HorizontalAlignment="Left" Height="166" Margin="30,0,0,0" VerticalAlignment="Top" Width="201" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="166" Margin="247,0,0,0" VerticalAlignment="Top" Width="201" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="Back_Button" Content="Back" HorizontalAlignment="Left" Margin="30,212,0,0" Grid.Row="1" VerticalAlignment="Top" Width="71" Height="32" Click="Back_Button_click"/>
 
     </Grid>
 </Window>

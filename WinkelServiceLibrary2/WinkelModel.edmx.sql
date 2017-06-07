@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/02/2017 11:57:50
--- Generated from EDMX file: C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelServiceLibrary2\WinkelModel.edmx
+-- Date Created: 06/06/2017 12:55:15
+-- Generated from EDMX file: C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\WinkelModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,16 +17,31 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_CustomerEntityInventoryEntity]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[CustomerEntitySet] DROP CONSTRAINT [FK_CustomerEntityInventoryEntity];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ProductInventoryEntityInventoryEntity]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProductInventoryEntitySet] DROP CONSTRAINT [FK_ProductInventoryEntityInventoryEntity];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ProductEntityProductInventoryEntity]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProductInventoryEntitySet] DROP CONSTRAINT [FK_ProductEntityProductInventoryEntity];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[CustomerSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[CustomerSet];
+IF OBJECT_ID(N'[dbo].[CustomerEntitySet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CustomerEntitySet];
 GO
-IF OBJECT_ID(N'[dbo].[ProductSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[ProductSet];
+IF OBJECT_ID(N'[dbo].[ProductEntitySet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ProductEntitySet];
+GO
+IF OBJECT_ID(N'[dbo].[InventoryEntitySet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[InventoryEntitySet];
+GO
+IF OBJECT_ID(N'[dbo].[ProductInventoryEntitySet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ProductInventoryEntitySet];
 GO
 
 -- --------------------------------------------------

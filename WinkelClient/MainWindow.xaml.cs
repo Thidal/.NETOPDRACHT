@@ -34,9 +34,13 @@ namespace WinkelClient
                 string password = PassText.Text;
                 if(proxy.Login(username, password))
                 {
-                    ShopWindow window = new ShopWindow();
+                    ShopWindow window = new ShopWindow(username);
                     window.Show();
                     Close();
+                }
+                else
+                {
+                    MessageBox.Show("Login is mislukt");
                 }
 
             }

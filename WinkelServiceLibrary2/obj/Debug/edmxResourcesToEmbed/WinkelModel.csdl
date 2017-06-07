@@ -10,12 +10,12 @@
       <End Role="InventoryEntity" EntitySet="InventoryEntitySet" />
     </AssociationSet>
     <AssociationSet Name="ProductInventoryEntityInventoryEntity" Association="WinkelModel.ProductInventoryEntityInventoryEntity">
-      <End Role="ProductInventoryEntity" EntitySet="ProductInventoryEntitySet" />
-      <End Role="InventoryEntity" EntitySet="InventoryEntitySet" />
+      <End EntitySet="ProductInventoryEntitySet" Role="ProductInventoryEntity" />
+      <End EntitySet="InventoryEntitySet" Role="InventoryEntity" />
     </AssociationSet>
     <AssociationSet Name="ProductEntityProductInventoryEntity" Association="WinkelModel.ProductEntityProductInventoryEntity">
-      <End Role="ProductEntity" EntitySet="ProductEntitySet" />
-      <End Role="ProductInventoryEntity" EntitySet="ProductInventoryEntitySet" />
+      <End EntitySet="ProductEntitySet" Role="ProductEntity" />
+      <End EntitySet="ProductInventoryEntitySet" Role="ProductInventoryEntity" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="CustomerEntity">
@@ -51,11 +51,11 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
     <NavigationProperty Name="InventoryEntity" Relationship="WinkelModel.ProductInventoryEntityInventoryEntity" FromRole="ProductInventoryEntity" ToRole="InventoryEntity" />
-    <Property Name="InventoryEntityId" Type="Int32" Nullable="false" />
+    <Property Name="InventoryEntityId" Nullable="false" Type="Int32" />
     <NavigationProperty Name="ProductEntity" Relationship="WinkelModel.ProductEntityProductInventoryEntity" FromRole="ProductInventoryEntity" ToRole="ProductEntity" />
-    <Property Name="ProductEntityId" Type="Int32" Nullable="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Name="ProductEntityId" Nullable="false" Type="Int32" />
   </EntityType>
   <Association Name="CustomerEntityInventoryEntity">
     <End Type="WinkelModel.CustomerEntity" Role="CustomerEntity" Multiplicity="*" />
@@ -70,8 +70,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="ProductInventoryEntityInventoryEntity">
-    <End Type="WinkelModel.ProductInventoryEntity" Role="ProductInventoryEntity" Multiplicity="*" />
-    <End Type="WinkelModel.InventoryEntity" Role="InventoryEntity" Multiplicity="1" />
+    <End Type="WinkelModel.ProductInventoryEntity" Multiplicity="*" Role="ProductInventoryEntity" />
+    <End Type="WinkelModel.InventoryEntity" Multiplicity="1" Role="InventoryEntity" />
     <ReferentialConstraint>
       <Principal Role="InventoryEntity">
         <PropertyRef Name="Id" />
@@ -82,8 +82,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="ProductEntityProductInventoryEntity">
-    <End Type="WinkelModel.ProductEntity" Role="ProductEntity" Multiplicity="1" />
-    <End Type="WinkelModel.ProductInventoryEntity" Role="ProductInventoryEntity" Multiplicity="*" />
+    <End Type="WinkelModel.ProductEntity" Multiplicity="1" Role="ProductEntity" />
+    <End Type="WinkelModel.ProductInventoryEntity" Multiplicity="*" Role="ProductInventoryEntity" />
     <ReferentialConstraint>
       <Principal Role="ProductEntity">
         <PropertyRef Name="Id" />

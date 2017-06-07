@@ -16,3 +16,22 @@ C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\Winke
 C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelClient\obj\Debug\WinkelClient.csprojResolveAssemblyReference.cache
 C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelClient\obj\Debug\ShopWindow.g.cs
 C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelClient\obj\Debug\ShopWindow.baml
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\bin\Debug\WinkelClient.exe.config
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\bin\Debug\WinkelClient.exe
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\bin\Debug\WinkelClient.pdb
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\WinkelClient.csprojResolveAssemblyReference.cache
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\MainWindow.g.cs
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\RegisterWindow.g.cs
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\ShopWindow.g.cs
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\App.g.cs
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\WinkelClient_MarkupCompile.cache
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\WinkelClient_MarkupCompile.lref
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\MainWindow.baml
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\RegisterWindow.baml
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\ShopWindow.baml
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\WinkelClient.g.resources
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\WinkelClient.Properties.Resources.resources
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\WinkelClient.csproj.GenerateResource.Cache
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\WinkelClient.exe
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\WinkelClient.pdb
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelClient\obj\Debug\GeneratedInternalTypeHelper.g.cs

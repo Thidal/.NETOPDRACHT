@@ -6,9 +6,9 @@
     <edmx:Diagrams>
       <Diagram DiagramId="dca9df74b0f74cc2a5c8e6b0728a4f31" Name="Diagram1" >
         <EntityTypeShape EntityType="WinkelModel.CustomerEntity" Width="1.5" PointX="0.5" PointY="1.25" />
-        <EntityTypeShape EntityType="WinkelModel.ProductEntity" Width="1.75" PointX="6.75" PointY="1.25" />
+        <EntityTypeShape EntityType="WinkelModel.ProductEntity" Width="2.375" PointX="7.5" PointY="1.75" />
         <EntityTypeShape EntityType="WinkelModel.InventoryEntity" PointX="2.625" PointY="1.25" Width="1.5" />
-        <EntityTypeShape EntityType="WinkelModel.ProductInventoryEntity" Width="1.5" PointX="4.75" PointY="1.375" />
+        <EntityTypeShape EntityType="WinkelModel.ProductInventoryEntity" PointX="4.75" PointY="1.375" Width="1.5" />
         <AssociationConnector Association="WinkelModel.CustomerEntityInventoryEntity" />
         <AssociationConnector Association="WinkelModel.ProductInventoryEntityInventoryEntity" />
         <AssociationConnector Association="WinkelModel.ProductEntityProductInventoryEntity" />

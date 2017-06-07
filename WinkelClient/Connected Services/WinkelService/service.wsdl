@@ -25,6 +25,30 @@
   <wsdl:message name="IWinkelService_getProduct_OutputMessage">
     <wsdl:part name="parameters" element="tns:getProductResponse" />
   </wsdl:message>
+  <wsdl:message name="IWinkelService_getSaldo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSaldo" />
+  </wsdl:message>
+  <wsdl:message name="IWinkelService_getSaldo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSaldoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWinkelService_buy_product_InputMessage">
+    <wsdl:part name="parameters" element="tns:buy_product" />
+  </wsdl:message>
+  <wsdl:message name="IWinkelService_buy_product_OutputMessage">
+    <wsdl:part name="parameters" element="tns:buy_productResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWinkelService_getInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInventory" />
+  </wsdl:message>
+  <wsdl:message name="IWinkelService_getInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWinkelService_ReverseString_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseString" />
+  </wsdl:message>
+  <wsdl:message name="IWinkelService_ReverseString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseStringResponse" />
+  </wsdl:message>
   <wsdl:portType name="IWinkelService">
     <wsdl:operation name="Login">
       <wsdl:input wsaw:Action="http://tempuri.org/IWinkelService/Login" message="tns:IWinkelService_Login_InputMessage" />
@@ -37,6 +61,22 @@
     <wsdl:operation name="getProduct">
       <wsdl:input wsaw:Action="http://tempuri.org/IWinkelService/getProduct" message="tns:IWinkelService_getProduct_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWinkelService/getProductResponse" message="tns:IWinkelService_getProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSaldo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWinkelService/getSaldo" message="tns:IWinkelService_getSaldo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWinkelService/getSaldoResponse" message="tns:IWinkelService_getSaldo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="buy_product">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWinkelService/buy_product" message="tns:IWinkelService_buy_product_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWinkelService/buy_productResponse" message="tns:IWinkelService_buy_product_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWinkelService/getInventory" message="tns:IWinkelService_getInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWinkelService/getInventoryResponse" message="tns:IWinkelService_getInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReverseString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWinkelService/ReverseString" message="tns:IWinkelService_ReverseString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWinkelService/ReverseStringResponse" message="tns:IWinkelService_ReverseString_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWinkelService" type="tns:IWinkelService">
@@ -61,6 +101,42 @@
     </wsdl:operation>
     <wsdl:operation name="getProduct">
       <soap:operation soapAction="http://tempuri.org/IWinkelService/getProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSaldo">
+      <soap:operation soapAction="http://tempuri.org/IWinkelService/getSaldo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buy_product">
+      <soap:operation soapAction="http://tempuri.org/IWinkelService/buy_product" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInventory">
+      <soap:operation soapAction="http://tempuri.org/IWinkelService/getInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReverseString">
+      <soap:operation soapAction="http://tempuri.org/IWinkelService/ReverseString" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -7,9 +7,12 @@
         mc:Ignorable="d"
         Title="RegisterWindow" Height="300" Width="300">
     <Grid>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="31,78,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Register" Content="Button" HorizontalAlignment="Left" Margin="106,180,0,0" VerticalAlignment="Top" Width="75" Click="Register_OK"/>
-        <TextBox x:Name="UsernameText" HorizontalAlignment="Left" Height="23" Margin="144,82,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="31,78,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Register" Content="Register" HorizontalAlignment="Left" Margin="106,120,0,0" VerticalAlignment="Top" Width="75" Click="Register_OK"/>
+        <TextBox x:Name="UsernameText" HorizontalAlignment="Left" Height="23" Margin="144,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Back_Button" Content="Back to Login" HorizontalAlignment="Left" Margin="106,227,0,0" VerticalAlignment="Top" Width="75" Click="Back_Button_Click"/>
+        <Label Content="Click here to go back to the login screen&#xD;&#xA;" HorizontalAlignment="Left" Margin="31,200,0,0" VerticalAlignment="Top" Height="27"/>
+        <Label x:Name="password_label" Content="" HorizontalAlignment="Left" Margin="31,169,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

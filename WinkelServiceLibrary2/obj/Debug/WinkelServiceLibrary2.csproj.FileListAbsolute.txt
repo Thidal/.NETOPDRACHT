@@ -8,3 +8,13 @@ C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\Winke
 C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelServiceLibrary2\obj\Debug\WinkelServiceLibrary2.csprojResolveAssemblyReference.cache
 C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelServiceLibrary2\obj\Debug\WinkelServiceLibrary2.dll
 C:\Users\wilco\Documents\Visual Studio 2017\Projects\WinkelServiceLibrary2\WinkelServiceLibrary2\obj\Debug\WinkelServiceLibrary2.pdb
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\bin\Debug\WinkelServiceLibrary2.dll.config
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\bin\Debug\WinkelServiceLibrary2.dll
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\bin\Debug\WinkelServiceLibrary2.pdb
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\bin\Debug\EntityFramework.dll
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\bin\Debug\EntityFramework.xml
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\obj\Debug\WinkelServiceLibrary2.csprojResolveAssemblyReference.cache
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\obj\Debug\WinkelServiceLibrary2.dll
+C:\Users\jkkoe\Desktop\Opdracht .NET\.NETOPDRACHT\WinkelServiceLibrary2\obj\Debug\WinkelServiceLibrary2.pdb

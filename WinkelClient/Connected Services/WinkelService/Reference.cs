@@ -15,9 +15,9 @@ namespace WinkelClient.WinkelService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ProductEntity", Namespace="http://schemas.datacontract.org/2004/07/WinkelServiceLibrary2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Product", Namespace="http://schemas.datacontract.org/2004/07/WinkelServiceLibrary2")]
     [System.SerializableAttribute()]
-    public partial class ProductEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Product : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -30,9 +30,6 @@ namespace WinkelClient.WinkelService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double PriceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WinkelClient.WinkelService.ProductInventoryEntity[] ProductInventoryEntityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StockField;
@@ -87,19 +84,6 @@ namespace WinkelClient.WinkelService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WinkelClient.WinkelService.ProductInventoryEntity[] ProductInventoryEntity {
-            get {
-                return this.ProductInventoryEntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ProductInventoryEntityField, value) != true)) {
-                    this.ProductInventoryEntityField = value;
-                    this.RaisePropertyChanged("ProductInventoryEntity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Stock {
             get {
                 return this.StockField;
@@ -108,317 +92,6 @@ namespace WinkelClient.WinkelService {
                 if ((object.ReferenceEquals(this.StockField, value) != true)) {
                     this.StockField = value;
                     this.RaisePropertyChanged("Stock");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ProductInventoryEntity", Namespace="http://schemas.datacontract.org/2004/07/WinkelServiceLibrary2")]
-    [System.SerializableAttribute()]
-    public partial class ProductInventoryEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WinkelClient.WinkelService.InventoryEntity InventoryEntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int InventoryEntityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WinkelClient.WinkelService.ProductEntity ProductEntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ProductEntityIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public WinkelClient.WinkelService.InventoryEntity InventoryEntity {
-            get {
-                return this.InventoryEntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.InventoryEntityField, value) != true)) {
-                    this.InventoryEntityField = value;
-                    this.RaisePropertyChanged("InventoryEntity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int InventoryEntityId {
-            get {
-                return this.InventoryEntityIdField;
-            }
-            set {
-                if ((this.InventoryEntityIdField.Equals(value) != true)) {
-                    this.InventoryEntityIdField = value;
-                    this.RaisePropertyChanged("InventoryEntityId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public WinkelClient.WinkelService.ProductEntity ProductEntity {
-            get {
-                return this.ProductEntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ProductEntityField, value) != true)) {
-                    this.ProductEntityField = value;
-                    this.RaisePropertyChanged("ProductEntity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ProductEntityId {
-            get {
-                return this.ProductEntityIdField;
-            }
-            set {
-                if ((this.ProductEntityIdField.Equals(value) != true)) {
-                    this.ProductEntityIdField = value;
-                    this.RaisePropertyChanged("ProductEntityId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="InventoryEntity", Namespace="http://schemas.datacontract.org/2004/07/WinkelServiceLibrary2")]
-    [System.SerializableAttribute()]
-    public partial class InventoryEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WinkelClient.WinkelService.CustomerEntity[] CustomerEntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WinkelClient.WinkelService.ProductInventoryEntity[] ProductInventoryEntityField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public WinkelClient.WinkelService.CustomerEntity[] CustomerEntity {
-            get {
-                return this.CustomerEntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomerEntityField, value) != true)) {
-                    this.CustomerEntityField = value;
-                    this.RaisePropertyChanged("CustomerEntity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public WinkelClient.WinkelService.ProductInventoryEntity[] ProductInventoryEntity {
-            get {
-                return this.ProductInventoryEntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ProductInventoryEntityField, value) != true)) {
-                    this.ProductInventoryEntityField = value;
-                    this.RaisePropertyChanged("ProductInventoryEntity");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerEntity", Namespace="http://schemas.datacontract.org/2004/07/WinkelServiceLibrary2")]
-    [System.SerializableAttribute()]
-    public partial class CustomerEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WinkelClient.WinkelService.InventoryEntity InventoryEntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int InventoryEntityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double MoneyField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PasswordField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public WinkelClient.WinkelService.InventoryEntity InventoryEntity {
-            get {
-                return this.InventoryEntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.InventoryEntityField, value) != true)) {
-                    this.InventoryEntityField = value;
-                    this.RaisePropertyChanged("InventoryEntity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int InventoryEntityId {
-            get {
-                return this.InventoryEntityIdField;
-            }
-            set {
-                if ((this.InventoryEntityIdField.Equals(value) != true)) {
-                    this.InventoryEntityIdField = value;
-                    this.RaisePropertyChanged("InventoryEntityId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double Money {
-            get {
-                return this.MoneyField;
-            }
-            set {
-                if ((this.MoneyField.Equals(value) != true)) {
-                    this.MoneyField = value;
-                    this.RaisePropertyChanged("Money");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Password {
-            get {
-                return this.PasswordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
-                    this.PasswordField = value;
-                    this.RaisePropertyChanged("Password");
                 }
             }
         }
@@ -444,7 +117,19 @@ namespace WinkelClient.WinkelService {
         void Register(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWinkelService/getProduct", ReplyAction="http://tempuri.org/IWinkelService/getProductResponse")]
-        WinkelClient.WinkelService.ProductEntity[] getProduct();
+        WinkelClient.WinkelService.Product[] getProduct();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWinkelService/getSaldo", ReplyAction="http://tempuri.org/IWinkelService/getSaldoResponse")]
+        double getSaldo(string u);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWinkelService/buy_product", ReplyAction="http://tempuri.org/IWinkelService/buy_productResponse")]
+        void buy_product(string p, string u);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWinkelService/getInventory", ReplyAction="http://tempuri.org/IWinkelService/getInventoryResponse")]
+        WinkelClient.WinkelService.Product[] getInventory(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWinkelService/ReverseString", ReplyAction="http://tempuri.org/IWinkelService/ReverseStringResponse")]
+        string ReverseString(string s);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -482,8 +167,24 @@ namespace WinkelClient.WinkelService {
             base.Channel.Register(username);
         }
         
-        public WinkelClient.WinkelService.ProductEntity[] getProduct() {
+        public WinkelClient.WinkelService.Product[] getProduct() {
             return base.Channel.getProduct();
+        }
+        
+        public double getSaldo(string u) {
+            return base.Channel.getSaldo(u);
+        }
+        
+        public void buy_product(string p, string u) {
+            base.Channel.buy_product(p, u);
+        }
+        
+        public WinkelClient.WinkelService.Product[] getInventory(string username) {
+            return base.Channel.getInventory(username);
+        }
+        
+        public string ReverseString(string s) {
+            return base.Channel.ReverseString(s);
         }
     }
 }

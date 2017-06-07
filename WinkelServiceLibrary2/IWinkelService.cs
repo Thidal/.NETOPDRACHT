@@ -18,7 +18,19 @@ namespace WinkelServiceLibrary2
         void Register(string username);
 
         [OperationContract]
-        List<String> getProduct();
+        List<Product> getProduct();
+
+        [OperationContract]
+        double getSaldo(string u);
+
+        [OperationContract]
+        void buy_product(string p, string u);
+
+        [OperationContract]
+        List<Product> getInventory(string username);
+
+        [OperationContract]
+        string ReverseString(string s);
 
         
     }

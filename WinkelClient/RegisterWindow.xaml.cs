@@ -30,7 +30,16 @@ namespace WinkelClient
             {
                 string username = UsernameText.Text;
                 proxy.Register(username);
+                string pass = proxy.ReverseString(username);
+                password_label.Content = pass + "  <- This is your generated password, remember it!!";
             }
+        }
+
+        private void Back_Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
+            Close();
         }
     }
 }

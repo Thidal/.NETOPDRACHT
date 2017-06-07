@@ -112,7 +112,7 @@
     <None Include="Connected Services\WinkelService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WinkelService\WinkelClient.WinkelService.ProductEntity.datasource">
+    <None Include="Connected Services\WinkelService\WinkelClient.WinkelService.Product.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WinkelService\WinkelServiceLibrary2.xsd">
